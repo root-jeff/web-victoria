@@ -1,10 +1,10 @@
-import { createContext } from 'react';
+import { createContext } from "react";
 
 // Define los tipos de alerta
 export enum AlertType {
-  SUCCESS = 'success',
-  WARNING = 'warning',
-  ERROR = 'error',
+  SUCCESS = "success",
+  WARNING = "warning",
+  ERROR = "error",
 }
 
 // Define la estructura de una alerta
@@ -24,6 +24,8 @@ export interface AlertContextType {
 // Crea el contexto de alertas
 export const AlertContext = createContext<AlertContextType>({
   alerts: [],
-  addAlert: (type: AlertType, message: string) => console.warn('No se ha proporcionado un proveedor de contexto de alertas'),
-  removeAlert: (id: number) => console.warn('No se ha proporcionado un proveedor de contexto de alertas'),
+  addAlert: (type: AlertType, message: string) =>
+    console.warn("No se ha proporcionado un proveedor de contexto de alertas"),
+  removeAlert: (id: number) =>
+    console.warn("No se ha proporcionado un proveedor de contexto de alertas"),
 });
